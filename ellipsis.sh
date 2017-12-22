@@ -4,6 +4,7 @@ pkg.link() {
   case $(os.platform) in
     osx)
       fs.link_file "emacs.d" "$HOME/.emacs.d"
+      fs.link_file "platforms/osx/spacemacs" "$HOME/.spacemacs"
       ;;
   esac
 }
