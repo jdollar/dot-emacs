@@ -11,6 +11,11 @@ pkg.link() {
 pkg.install() {
   git submodule init
   git submodule update
+
+  case $(os.platform) in
+    osx)
+      installBrewPackages
+  esac
 }
 
 pkg.pull() {
@@ -21,4 +26,11 @@ pkg.unlink() {
   rm "$HOME/.emacs.d"
 
   hooks.unlink
+}
+
+installBrewPackages() {
+  brew tap d12frosted/emacs-plus
+  brew update
+  brew install emacs-plus
+  brew linkapps emacs-plus
 }
