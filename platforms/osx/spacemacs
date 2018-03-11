@@ -310,7 +310,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq neo-theme 'icons)
 
   (unless (display-graphic-p)
      (setq linum-relative-format "%3s "))
@@ -386,5 +385,5 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
->>>>>>> ebae4f42aae09595c333eb6952be292e3414fd1a
+)
 )
